@@ -67,7 +67,7 @@ Executables will be placed in `build/bin/` (or `bin/`).
 
 **Options:**
 - `-s <ratio>`: Subsampling threshold ratio (default: `10`). Setting `-s 100` significantly improves output mesh quality.
-- `-l <ratio>`: Edge splitting ratio (`-l 3` splits long edges exceeding $3 \times \text{average\_edge\_length}$).
+- `-l <ratio>`: Edge splitting ratio (`-l 3` splits long edges exceeding 3 times the average edge length).
 - `-m <0|1>`: Enforce 2-manifold output topology (`1` = enabled, `0` = disabled).
 - `-d <0|1|2>`: Interactive visualization level (`0` = off, `1` = window on completion, `2` = step-by-step iteration display). Press key `'e'` in the display window to advance iterations.
 - `-o <directory>`: Custom output directory.
@@ -97,7 +97,7 @@ Executables will be placed in `build/bin/` (or `bin/`).
 ACVD works by clustering input mesh vertices. Output quality depends on two key parameters:
 
 1. **Subsampling Ratio (`-s ratio`)**: Controls the ratio of intermediate samples to output vertices. Defaults to `10`. Increasing to `-s 100` improves sampling accuracy and output triangle quality.
-2. **Edge Splitting Ratio (`-l ratio`)**: Pre-splits input edges longer than $\text{ratio} \times \text{average\_edge\_length}$. Use `-l 3` to eliminate long, thin triangles in input models.
+2. **Edge Splitting Ratio (`-l ratio`)**: Pre-splits input edges longer than ratio X average edge length. Use `-l 3` to eliminate long, thin triangles in input models.
 3. **Manifold Enforcement (`-m 1`)**: Guarantees that the output mesh is topologically 2-manifold (no self-intersections or non-manifold edges).
 
 ---
